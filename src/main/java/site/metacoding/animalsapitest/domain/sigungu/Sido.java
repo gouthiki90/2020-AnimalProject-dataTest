@@ -4,57 +4,52 @@ import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
-public class Sigungu {
+public class Sido {
 
     private Response response;
 
     @AllArgsConstructor
-    @NoArgsConstructor
     @Data
     class Response {
 
-        private Header Header;
+        private Header header;
         private Body body;
 
         @AllArgsConstructor
-        @NoArgsConstructor
         @Data
         class Header {
+
             private String reqNo;
             private String resultCode;
             private String resultMsg;
         }
 
         @AllArgsConstructor
-        @NoArgsConstructor
         @Data
         class Body {
-            private Items Item;
+
+            private Items items;
+            private Integer numOfRows;
+            private Integer pageNo;
+            private Integer totalCount;
 
             @AllArgsConstructor
-            @NoArgsConstructor
             @Data
             class Items {
-                private List<Item> Items;
 
-                private Integer numOfRows;
-                private Integer pageNo;
-                private Integer totalCount;
+                private List<Item> item;
 
                 @AllArgsConstructor
-                @NoArgsConstructor
                 @Data
                 class Item {
+
                     private String orgCd;
                     private String orgdownNm;
                 }
             }
-
         }
     }
 
