@@ -49,7 +49,7 @@ public class TestController {
                             + "&numOfRows=3&pageNo=1&_type=json");
             RestTemplate restTemplate = new RestTemplate();
 
-            String response = restTemplate.getForObject(uri, String.class);
+            Sido[] response = restTemplate.getForObject(uri, Sido[].class);
 
             System.out.println(response);
         } catch (URISyntaxException e) {
