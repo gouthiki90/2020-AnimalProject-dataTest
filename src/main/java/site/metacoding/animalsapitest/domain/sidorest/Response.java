@@ -1,4 +1,4 @@
-package site.metacoding.animalsapitest.domain.sido;
+package site.metacoding.animalsapitest.domain.sidorest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

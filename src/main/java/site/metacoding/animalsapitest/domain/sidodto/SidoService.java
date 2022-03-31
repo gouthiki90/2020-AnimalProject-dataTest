@@ -1,4 +1,4 @@
-package site.metacoding.animalsapitest.domain.sigungu;
+package site.metacoding.animalsapitest.domain.sidodto;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,14 +7,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import com.google.gson.Gson;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
-import site.metacoding.animalsapitest.domain.sigungu.Sido.Response.Body.Items.Item;
+import site.metacoding.animalsapitest.domain.sidodto.Sido.Response.Body.Items.Item;
 
 @RequiredArgsConstructor
 @Service

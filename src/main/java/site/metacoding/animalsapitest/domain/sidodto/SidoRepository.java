@@ -1,4 +1,4 @@
-package site.metacoding.animalsapitest.domain.sigungu;
+package site.metacoding.animalsapitest.domain.sidodto;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
