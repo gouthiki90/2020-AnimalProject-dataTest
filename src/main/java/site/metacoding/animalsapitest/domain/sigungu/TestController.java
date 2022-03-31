@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import lombok.RequiredArgsConstructor;
+import site.metacoding.animalsapitest.domain.sido.Response;
 import site.metacoding.animalsapitest.domain.sigungu.Sido.Response.Body.Items.Item;
 
 @RequiredArgsConstructor
@@ -39,23 +40,5 @@ public class TestController {
         return "/sidoDownload";
     }
 
-    @GetMapping("/rest")
-    public String test() {
 
-        try {
-            String key = "jDqHGG%2BaNG47ijh6s3XzB%2BuF8fJOeovccnw%2FZtc9wLQUaKJumPo%2Frl1a2ygZ68dv9L0PD7drvpjPAeTnnB9f%2FQ%3D%3D";
-            URI uri = new URI(
-                    "http://apis.data.go.kr/1543061/abandonmentPublicSrvc/sido?serviceKey=" + key
-                            + "&numOfRows=3&pageNo=1&_type=json");
-            RestTemplate restTemplate = new RestTemplate();
-
-            Sido[] response = restTemplate.getForObject(uri, Sido[].class);
-
-            System.out.println(response);
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
 }
