@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.animalsapitest.domain.sidodto.SidoDto;
 import site.metacoding.animalsapitest.domain.sidodto.SidoService;
+import site.metacoding.animalsapitest.domain.sidorest.SidoRestDto;
+import site.metacoding.animalsapitest.service.SidoRestService;
 
 @RequiredArgsConstructor
 @Controller
 public class TestController {
 
     private final SidoService service;
+    private final SidoRestService sRestService;
 
 
     @GetMapping("/")
@@ -29,5 +32,14 @@ public class TestController {
         return "/sidoDownload";
     }
 
+    @GetMapping("/rest")
+    public String restDownload(SidoRestDto sidoRestDto, Model model){
+
+        List<SidoRestDto> sidoEntity = sRestService.다운로드(sidoRestDto);
+
+        model.addAttribute("sidolist", sidoEntity);
+
+        return "/sidoRestDownload";
+    }
 
 }
